@@ -1,0 +1,84 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "DM Sans", sans-serif;
+  --font-display: "Cormorant Garamond", serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+  --color-sage: var(--sage);
+  --color-soft: var(--soft);
+  --color-deep: var(--deep);
+  --color-deep-foreground: var(--deep-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+}
+:root {
+  --background: oklch(0.99 0.004 85);
+  --foreground: oklch(0.24 0.045 160);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.24 0.045 160);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.24 0.045 160);
+  --primary: oklch(0.33 0.057 160);
+  --primary-foreground: oklch(0.99 0.004 85);
+  --secondary: oklch(0.93 0.024 154);
+  --secondary-foreground: oklch(0.24 0.045 160);
+  --muted: oklch(0.96 0.012 145);
+  --muted-foreground: oklch(0.48 0.025 155);
+  --accent: oklch(0.91 0.035 148);
+  --accent-foreground: oklch(0.24 0.045 160);
+  --border: oklch(0.86 0.023 145);
+  --input: oklch(0.86 0.023 145);
+  --ring: oklch(0.56 0.085 86);
+  --gold: oklch(0.65 0.12 78);
+  --gold-foreground: oklch(0.2 0.03 155);
+  --sage: oklch(0.67 0.055 154);
+  --soft: oklch(0.965 0.015 120);
+  --deep: oklch(0.25 0.05 159);
+  --deep-foreground: oklch(0.98 0.008 93);
+  --destructive: oklch(0.57 0.2 27);
+  --destructive-foreground: oklch(1 0 0);
+}
+@layer base {
+  * { border-color: var(--border); }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--background); color: var(--foreground); font-family: "DM Sans", sans-serif; }
+  ::selection { background: var(--sage); color: var(--deep); }
+}
+.font-display { font-family: "Cormorant Garamond", serif; }
+.hero-shade { background: linear-gradient(90deg, oklch(0.17 0.036 159 / 91%) 0%, oklch(0.19 0.035 159 / 80%) 34%, oklch(0.19 0.035 159 / 28%) 71%, oklch(0.19 0.035 159 / 4%) 100%); }
+.hero-image { object-position: center center; }
+.section-kicker { color: var(--gold); font-size: .68rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+.gold-rule { width: 48px; height: 2px; background: var(--gold); }
+.service-item { transition: background-color .25s ease, transform .25s ease; }
+.service-item:hover { background-color: var(--soft); transform: translateY(-3px); }
+.form-field { width: 100%; min-height: 48px; border: 1px solid var(--border); background: var(--card); color: var(--foreground); border-radius: 3px; padding: 0 14px; outline: none; transition: border-color .2s ease, box-shadow .2s ease; }
+.form-field:focus { border-color: var(--gold); box-shadow: 0 0 0 3px oklch(0.65 0.12 78 / 13%); }
+.form-field::placeholder { color: var(--muted-foreground); }
+textarea.form-field { padding-top: 12px; min-height: 110px; resize: vertical; }
+@media (max-width: 767px) {
+  .hero-shade { background: linear-gradient(90deg, oklch(0.17 0.036 159 / 89%), oklch(0.17 0.036 159 / 57%)); }
+  .hero-image { object-position: 63% center; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .service-item { transition: none; } }

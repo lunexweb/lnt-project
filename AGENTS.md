@@ -1,0 +1,2 @@
+- Keep LNT as a single-page informational site with a client-side WhatsApp booking handoff; no appointment data is stored because requests are completed in WhatsApp.
+- Use the supplied logo asset as the brand source and derive the favicon from its artwork to keep them visually consistent.
