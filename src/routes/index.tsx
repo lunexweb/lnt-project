@@ -7,7 +7,7 @@ import heroImage from "@/assets/home-visit.jpg";
 import maternalImage from "@/assets/maternal-care.jpg";
 import vanImage from "@/assets/mobile-clinic-van.jpg";
 import doorstepImage from "@/assets/doorstep-care.jpg";
-import bookingImage from "@/assets/booking-care.jpg";
+import bookingImage from "@/assets/booking care.jpeg";
 
 const services = [
   { title: "General consultations", description: "Personalised primary healthcare for you and your family.", icon: Stethoscope },
